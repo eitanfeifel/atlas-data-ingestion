@@ -1,7 +1,12 @@
 import Database from 'better-sqlite3';
+import fs from 'fs';
 import path from 'path';
 
-const dbPath = process.env.DATABASE_PATH ?? path.resolve(__dirname, '../../atlas.db');
+// Use Railway's mounted volume if present, otherwise fall back to project root
+const dbPath = fs.existsSync('/data')
+  ? '/data/atlas.db'
+  : path.resolve(__dirname, '../../atlas.db');
+
 const db = new Database(dbPath);
 
 export default db;

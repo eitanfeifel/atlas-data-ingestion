@@ -10,8 +10,7 @@ const port = Number(process.env.PORT ?? 3000);
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 
-  const csvPath = process.env.CSV_PATH
-    ?? path.resolve(__dirname, '../../data/atlas_inventory.csv');
+  const csvPath = path.resolve(__dirname, '../../data/atlas_inventory.csv');
 
   if (fs.existsSync(csvPath)) {
     const summary = runIngest(csvPath);
