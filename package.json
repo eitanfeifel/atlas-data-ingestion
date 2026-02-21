@@ -1,0 +1,38 @@
+{
+  "name": "atlas-data-ingestion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ingest": "ts-node src/ingest/ingest.ts",
+    "serve": "ts-node src/api/server.ts",
+    "dev": "ts-node src/api/server.ts",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "csv-parse": "^6.1.0",
+    "express": "^5.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.3.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}

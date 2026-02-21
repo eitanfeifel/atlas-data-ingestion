@@ -1,0 +1,16 @@
+account_number,debtor_name,phone_number,balance,status,client_name
+ACC1001,John Doe,555-123-4567,1250.50,Active,Chase Bank
+ACC1002,Jane Smith,555-222-3333,890.00,Active,Capital One
+ACC1003,Michael Brown,555-444-5555,0,Closed,Wells Fargo
+ACC1004,Sarah Johnson,555-666-7777,2300.75,Active,Discover
+ACC1005,David Lee,555-888-9999,150.25,Active,Chase Bank
+ACC1006,Emily Davis,555-111-2222,4300.00,Active,American Express
+ACC1007,Chris Martinez,555-333-4444,670.40,Closed,Capital One
+ACC1008,Amanda Wilson,555-777-8888,980.10,Active,Wells Fargo
+ACC1002,Jane Smith,555-222-3333,950.00,Active,Capital One
+ACC1009,Invalid Balance User,555-000-0000,notanumber,Active,Chase Bank
+,Missing Account User,555-101-2020,500.00,Active,Discover
+ACC1010,High Balance User,555-303-4040,15000.99,Active,American Express
+ACC1011,   Whitespace Name   ,555-505-6060,200.00,Active,Chase Bank
+ACC1012,No Phone User,,320.00,Active,Wells Fargo
+ACC1013,Pending Status User,555-606-7070,780.00,Pending,Discover

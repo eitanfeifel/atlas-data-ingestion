@@ -1,0 +1,4 @@
+atlas.db
+/atlas_inventory.csv
+node_modules/
+dist/
