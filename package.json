@@ -6,7 +6,7 @@
     "ingest": "ts-node src/ingest/ingest.ts",
     "serve": "ts-node src/api/server.ts",
     "dev": "ts-node src/api/server.ts",
-    "start": "ts-node src/ingest/ingest.ts && ts-node src/api/server.ts",
+    "start": "ts-node src/api/server.ts",
     "test": "jest"
   },
   "jest": {
