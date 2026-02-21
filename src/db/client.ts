@@ -9,4 +9,19 @@ const dbPath = fs.existsSync('/data')
 
 const db = new Database(dbPath);
 
+// Run schema immediately so the table exists before any module calls db.prepare()
+db.exec(`
+  CREATE TABLE IF NOT EXISTS accounts (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    account_number TEXT NOT NULL UNIQUE,
+    debtor_name    TEXT NOT NULL,
+    phone_number   TEXT,
+    balance        REAL NOT NULL,
+    status         TEXT NOT NULL,
+    client_name    TEXT NOT NULL,
+    created_at     TEXT DEFAULT (datetime('now')),
+    updated_at     TEXT DEFAULT (datetime('now'))
+  )
+`);
+
 export default db;
